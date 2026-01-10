@@ -1,14 +1,14 @@
 Name= megaphone
 
-src= megaphone.cpp
+SRC= megaphone.cpp
 
 CC= c++
 CFLAGS= -Wall -Wextra -Werror -std=c++98
 
 all: $(Name)
 
-$(Name): $(src)
-	$(CC) $(CFLAGS) -o $@ $(src)
+$(Name): $(SRC)
+	$(CC) $(CFLAGS) -o $@ $(SRC)
 
 fclean:
 	rm -f $(Name)
