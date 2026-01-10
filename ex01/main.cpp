@@ -1,13 +1,6 @@
 #include "contact.hpp"
 #include "phonebook.hpp"
 
-void	header()
-{
-	std::cout << "---------------------------------------------------------\n";
-	std::cout << "|index	|First Name	|Last Name	|Nickname	|\n";
-	std::cout << "---------------------------------------------------------\n";
-}
-
 int main()
 {
 	std::string cmd;
@@ -25,6 +18,21 @@ int main()
 		if (cmd == "ADD")
 		{
 			ob.NewContact();
+			if (std::cin.eof())
+			{
+				std::cout << "\nExiting... See you later!\n";
+				break;
+			}
+			std::cout << "New contact has been saved.\n";
+		}
+		else if (cmd == "SEARCH")
+		{
+			ob.Search();
+			if (std::cin.eof())
+			{
+				std::cout << "\nExiting... See you later!\n";
+				break;
+			}
 		}
 		else if (cmd == "EXIT")
 		{
