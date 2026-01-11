@@ -36,6 +36,7 @@ int main()
 		}
 		else if (cmd == "EXIT")
 		{
+			std::cout << "\nExiting... See you later!\n";
 			break;
 		}
 		else if (cmd.empty())
