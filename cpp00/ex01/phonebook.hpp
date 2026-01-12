@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iomanip>
+#include <cctype>
 #include "contact.hpp"
 
 class PhoneBook
