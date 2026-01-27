@@ -2,7 +2,7 @@
 #include "HumanB.hpp"
 #include <iostream>
 
-HumanB::HumanB(const std::string name)
+HumanB::HumanB(std::string name)
 {
     this->name = name;
     weapon = NULL;
