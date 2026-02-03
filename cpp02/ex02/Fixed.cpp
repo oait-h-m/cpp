@@ -21,7 +21,7 @@ Fixed::Fixed(const Fixed &other)
 
 Fixed	&Fixed::operator=(const Fixed &other)
 {
-	if (*this != other)
+	if (this != &other)
 		this->fixedPoint = other.fixedPoint;
 	return *this;
 }
