@@ -7,8 +7,7 @@ HDR = ClapTrap.hpp
 
 OBJ = $(SRC:.cpp=.o)
 
-all:
-	$(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJ) $(HDR)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
