@@ -17,7 +17,6 @@ ScavTrap::~ScavTrap()
 ScavTrap::ScavTrap(std::string input) : ClapTrap(input)
 {
 	std::cout << "ScavTrap constructor called" << std::endl;
-	name = input;
 	hitPoints = 100; 
 	energyPoints = 50;
 	attackDamage = 20;
