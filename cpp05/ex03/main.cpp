@@ -1,25 +1,21 @@
-#include <iostream>
+#include "Intern.hpp"
 #include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
+#include <iostream>
 
 int main()
 {
+    Intern intern;
 
-    Bureaucrat boss("Boss", 1);
+    AForm *f1 = intern.makeForm("robotomy request", "Bender");
+    AForm *f2 = intern.makeForm("shrubbery creation", "Home");
+    AForm *f3 = intern.makeForm("presidential pardon", "Arthur Dent");
+    AForm *invalid = intern.makeForm("coffee making", "Nobody");
 
-    ShrubberyCreationForm shrub("garden");
-    RobotomyRequestForm rob("Bender");
-    PresidentialPardonForm pardon("Arthur Dent");
 
-    boss.signForm(shrub);
-    boss.signForm(rob);
-    boss.signForm(pardon);
-
-    boss.executeForm(shrub);
-    boss.executeForm(rob);
-    boss.executeForm(pardon);
+    delete f1;
+    delete f2;
+    delete f3;
+    delete invalid;
 
     return 0;
 }
