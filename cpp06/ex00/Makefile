@@ -1,4 +1,4 @@
-NAME = exec
+NAME = convert
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -9,7 +9,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$NAME: $(OBJS) $(HDRS)
+$(NAME): $(OBJS) $(HDRS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
