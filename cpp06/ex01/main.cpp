@@ -17,6 +17,11 @@ int main()
     std::cout << "Serialized value : " << raw << "\n";
     std::cout << "Restored pointer : " << restored << "\n";
 
+    if (restored == original)
+        std::cout << "OK: pointers are equal" << std::endl;
+    else
+        std::cout << "ERROR: pointers differ" << std::endl;
+
     std::cout << "------------>Data<--------------" << std::endl;
     std::cout << "name = " << restored->name << std::endl;
     std::cout << "value = " << restored->value << std::endl;
