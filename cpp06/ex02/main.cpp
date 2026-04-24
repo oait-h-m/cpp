@@ -13,6 +13,8 @@ int main()
         std::cout << "identify(Base&): ";
         identify(*p);
 
+        std::cout << "------------------\n";
+
         delete p;
     }
     return 0;
